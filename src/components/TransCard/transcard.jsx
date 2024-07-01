@@ -8,11 +8,11 @@ export default function TransactionCard({ details, handleDelete, handleEdit }) {
 
     return (
         <div className={styles.card}>
-            <div className={styles.cardInner}>
+            <div className={styles.innercard}>
                 <div className={styles.cardIcon}>
-                    {details.category == 'food' && <PiPizza />}
-                    {details.category == 'entertainment' && <PiGift />}
-                    {details.category == 'travel' && <BsSuitcase2 />}
+                    {details.category === 'food' && <PiPizza />}
+                    {details.category === 'entertainment' && <PiGift />}
+                    {details.category === 'travel' && <BsSuitcase2 />}
                 </div>
                 <div className={styles.cardInfo}>
                     <h5>{details.title}</h5>
@@ -20,9 +20,9 @@ export default function TransactionCard({ details, handleDelete, handleEdit }) {
                 </div>
             </div>
 
-            <div className={styles.cardInner}>
+            <div className={styles.innercard}>
                 <p className={styles.cardPrice}>{`₹${details.price}`}</p>
-                <div className={styles.cardButtonWrapper}>
+                <div className={styles.wrappercard}>
                     <button className={styles.cardDelete} onClick={handleDelete}>
                         <IoMdCloseCircleOutline />
                     </button>

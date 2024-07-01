@@ -1,10 +1,10 @@
-.paginationWrapper{
+.wrapperpagi{
     display: flex;
     gap:12px;
     justify-content: center;
 }
 
-.paginationWrapper p{
+.wrapperpagi p{
     background: #43967B;
     width: 48px;
     height: 48px;
@@ -17,7 +17,7 @@
     color:#fff;
 }
 
-.paginationWrapper button{
+.wrapperpagi button{
     background: #F1F1F1;
     color:#000;
     width: 48px;
@@ -32,13 +32,13 @@
     cursor: pointer;
 }
 
-.paginationWrapper button[disabled]{
+.wrapperpagi button[disabled]{
     opacity: 0.5;
 }
 
 @media(max-width:767px){
-    .paginationWrapper button,
-    .paginationWrapper p{
+    .wrapperpagi button,
+    .wrapperpagi p{
         width: 42px;
         height: 42px;
         font-size: 1.4rem;

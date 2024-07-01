@@ -7,7 +7,7 @@
     flex-wrap:wrap;
     margin-bottom: 24px;
 }
-.cardInner{
+.innercard{
     display: flex;
     gap:20px;
     align-items: center;
@@ -32,11 +32,11 @@
     color:#F4BB4A;
     font-weight: 700;
 }
-.cardButtonWrapper { 
+.wrappercard { 
     display: flex;
     gap:8px;
 }
-.cardButtonWrapper button{
+.wrappercard button{
     padding:12px;
     border-radius: 15px;
     border:0;
@@ -57,15 +57,15 @@
         flex-direction: column;
         align-items: flex-start;
     }
-    .cardInner{
+    .innercard{
         gap:12px;
     }
-    .cardInner:last-child{
+    .innercard:last-child{
         padding-left: 3.3rem;
         justify-content: space-between;
         width: 100%;
     }
-    .cardButtonWrapper button{
+    .wrappercard button{
         font-size: 1.2rem;
         padding:8px;
         border-radius: 0.5rem;

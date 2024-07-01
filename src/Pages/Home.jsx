@@ -142,7 +142,7 @@ export default function Home() {
       </div>
 
       {/* Transactions and bar chart wrapper */}
-      <div className={styles.transactionsWrapper}>
+      <div className={styles.wrappertrans }>
         <TransactionList
           transactions={expenseList}
           editTransactions={setExpenseList}

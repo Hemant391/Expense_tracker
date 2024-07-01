@@ -1,14 +1,14 @@
-.formWrapper h3{
+.wrapperform h3{
     font-size: 30px;
     margin-bottom: 10px;
 }
-.formWrapper form{
+.wrapperform form{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap:18px;
 }
-.formWrapper input,
-.formWrapper select{
+.wrapperform input,
+.wrapperform select{
     background: #FBFBFB;
     border:0;
     outline:0;
@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
 @media(max-width:767px){
-    .formWrapper form{
+    .wrapperform form{
         grid-template-columns:1fr ;
     }
 }

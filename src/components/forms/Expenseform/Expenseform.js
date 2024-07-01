@@ -93,7 +93,7 @@ export default function ExpenseForm({ setIsOpen, expenseList, setExpenseList, ed
 
     return (
 
-        <div className={styles.formWrapper}>
+        <div className={styles.wrapperform}>
             <h3>{editId ? 'Edit Expense' : 'Add Expenses'}</h3>
             <form onSubmit={editId ? handleEdit : handleAdd}>
                 <input type="text" name="title" placeholder='Title'

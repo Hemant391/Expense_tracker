@@ -5,33 +5,33 @@ import { useSnackbar } from 'notistack';
 
 export default function AddBalanceForm({ setIsOpen, setBalance }) {
 
-    const [income, setIncome] = useState('')
+    const [money, setmoney] = useState('')
     const { enqueueSnackbar } = useSnackbar();
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        if (Number(income) < 0) {
+        if (Number(money) < 0) {
             enqueueSnackbar("Income should be greater than 0", { variant: "warning" })
             setIsOpen(false)
             return
         }
 
-        setBalance(prev => prev + Number(income))
+        setBalance(prev => prev + Number(money))
         setIsOpen(false)
     }
 
     return (
 
-        <div className={styles.formWrapper}>
+        <div className={styles.form}>
             <h3>Add Balance</h3>
             <form onSubmit={handleSubmit}>
 
                 <input
                     type="number"
                     placeholder='Income Amount'
-                    value={income}
-                    onChange={(e) => setIncome(e.target.value)}
+                    value={money}
+                    onChange={(e) => setmoney(e.target.value)}
                     required
                 />
 
