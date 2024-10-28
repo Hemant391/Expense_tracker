@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import Card from "../components/Card/Card";
+import Card from "../../components/Card/Card";
 import styles from "./Home.module.css";
-import TransactionList from "../components/Translist/Listtrans";
-import ExpenseForm from "../components/forms/Expenseform/Expenseform";
-import Modal from "../components/modals/modal";
-import AddBalanceForm from "../components/forms/Addbalance/AddBalance";
-import PieChart from "../components/pie/Piechart";
-import BarChart from "../components/bargraph/Bargraph";
+import TransactionList from "../../components/TransactionList/TransactionList";
+import ExpenseForm from "../../components/Forms/ExpenseForm/ExpenseForm";
+import Modal from "../../components/Modal/Modal";
+
+import AddBalanceForm from "../../components/Forms/AddBalanceForm/AddBalanceForm";
+import PieChart from "../../components/PieChart/PieChart";
+import BarChart from "../../components/BarChart/BarChart";
 
 export default function Home() {
   const [balance, setBalance] = useState(0);
@@ -14,7 +15,7 @@ export default function Home() {
   const [expenseList, setExpenseList] = useState([]);
   const [isMounted, setIsMounted] = useState(false);
 
- 
+  //Show hide modals
   const [isOpenExpense, setIsOpenExpense] = useState(false);
   const [isOpenBalance, setIsOpenBalance] = useState(false);
 
@@ -142,7 +143,7 @@ export default function Home() {
       </div>
 
       {/* Transactions and bar chart wrapper */}
-      <div className={styles.wrappertrans }>
+      <div className={styles.transactionsWrapper}>
         <TransactionList
           transactions={expenseList}
           editTransactions={setExpenseList}
@@ -151,17 +152,17 @@ export default function Home() {
           setBalance={setBalance}
         />
 
-        {/* <BarChart
+        <BarChart
           data={[
             { name: "Food", value: categorySpends.food },
             { name: "Entertainment", value: categorySpends.entertainment },
             { name: "Travel", value: categorySpends.travel },
           ]}
-        /> */}
+        />
       </div>
 
       {/* Modals */}
-      <Modal isOpen={isOpenExpense} setIsOpen={setIsOpenExpense}>
+        <Modal isOpen={isOpenExpense} setIsOpen={setIsOpenExpense}>
         <ExpenseForm
           setIsOpen={setIsOpenExpense}
           expenseList={expenseList}
@@ -169,7 +170,7 @@ export default function Home() {
           setBalance={setBalance}
           balance={balance}
         />
-      </Modal>
+      </Modal> 
 
       <Modal isOpen={isOpenBalance} setIsOpen={setIsOpenBalance}>
         <AddBalanceForm setIsOpen={setIsOpenBalance} setBalance={setBalance} />

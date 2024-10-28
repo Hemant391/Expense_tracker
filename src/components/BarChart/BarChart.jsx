@@ -1,12 +1,16 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import {
   BarChart,
   Bar,
+  Cell,
   XAxis,
   YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
   ResponsiveContainer,
 } from "recharts";
-import styles from "./bar.module.css";
+import styles from "./BarChart.module.css";
 
 export default function BarChartComponent({ data }) {
   return (

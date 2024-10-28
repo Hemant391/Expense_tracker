@@ -1,5 +1,5 @@
-import styles from './Expense.module.css'
-import Button from '../../buttons/button'
+import styles from './ExpenseForm.module.css'
+import Button from '../../Button/Button.jsx'
 import { useEffect, useState } from 'react'
 import { useSnackbar } from 'notistack';
 
@@ -93,7 +93,7 @@ export default function ExpenseForm({ setIsOpen, expenseList, setExpenseList, ed
 
     return (
 
-        <div className={styles.wrapperform}>
+        <div className={styles.formWrapper}>
             <h3>{editId ? 'Edit Expense' : 'Add Expenses'}</h3>
             <form onSubmit={editId ? handleEdit : handleAdd}>
                 <input type="text" name="title" placeholder='Title'

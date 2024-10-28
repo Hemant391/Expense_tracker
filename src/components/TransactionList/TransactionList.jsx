@@ -1,7 +1,7 @@
-import TransactionCard from '../TransCard/transcard'
-import styles from './Listtrans.module.css'
-import Modal from '../modals/modal'
-import ExpenseForm from '../forms/Expenseform/Expenseform'
+import TransactionCard from '../TransactionCard/TransactionCard'
+import styles from './TransactionList.module.css'
+import Modal from '../Modal/Modal'
+import ExpenseForm from '../Forms/ExpenseForm/ExpenseForm'
 import { useEffect, useState } from 'react'
 import Pagination from '../Pagination/Pagination'
 

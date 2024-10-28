@@ -1,13 +1,13 @@
-.form h3{
+.formWrapper h3{
     font-size: 30px;
     margin-bottom: 10px;
 }
-.form form{
+.formWrapper form{
     display: flex;
     flex-wrap: wrap;
     gap:18px;
 }
-.form input{
+.formWrapper input{
     background: #FBFBFB;
     border:0;
     outline:0;
@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 @media(max-width:767px){
-    .form form{
+    .formWrapper form{
         flex-direction: column;
     }
 }

@@ -17,14 +17,14 @@
     box-shadow: 0 4px 4px rgba(0,0,0,0.25);
     margin-bottom: 32px;
 }
-.wrappertrans{
+.transactionsWrapper{
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap:32px;
 }
 
-
-/* @media(max-width:767px){
+/*Mobile styles*/
+@media(max-width:767px){
     .container h1{
         text-align: center;
     }
@@ -33,7 +33,7 @@
         grid-template-columns: 1fr;
         gap:24px;
     }
-    .wrappertrans{
+    .transactionsWrapper{
         grid-template-columns: 1fr;
     }
-} */
+}

@@ -1,16 +1,13 @@
-import React from 'react';
-
+import Home from './pages/Home/Home'
 import { SnackbarProvider } from 'notistack';
 
-
-import HomePage from './Pages/Home'
 function App() {
-
   return (
     <SnackbarProvider >
       <div>
-        <HomePage />
-    </div>
+        <Home />
+        
+      </div>
     </SnackbarProvider>
   );
 }
